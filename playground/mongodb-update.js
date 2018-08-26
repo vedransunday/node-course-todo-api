@@ -1,4 +1,4 @@
-const {MongoClient, ObjectID} = require('mongodb');
+const { MongoClient, ObjectID } = require('mongodb');
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     if (err) {
@@ -26,13 +26,13 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     }, {
         $set: {
             name: 'Vedran'
-        }, 
+        },
         $inc: {
             age: 1
         }
     }, {
         returnOriginal: false
-    }).then((result) =>{
+    }).then((result) => {
         console.log(result);
     });
 

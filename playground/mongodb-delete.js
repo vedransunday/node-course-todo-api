@@ -1,4 +1,7 @@
-const {MongoClient, ObjectID} = require('mongodb');
+const {
+    MongoClient,
+    ObjectID
+} = require('mongodb');
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     if (err) {
@@ -29,7 +32,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     // });
 
     // deleteMany
-    db.collection('Users').deleteMany({name: 'Vedran'})
+    db.collection('Users').deleteMany({
+        name: 'Vedran'
+    })
 
     client.close();
 });
